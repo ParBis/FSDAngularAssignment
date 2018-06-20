@@ -1,0 +1,31 @@
+/*body {
+    background-color: lightblue;
+}*/
+.headerStyle {
+    color: #005580;
+    font-family: verdana;
+    font-size: 20px;
+	font-weight: bold;
+
+}
+
+.divText  {
+    color: black;
+    font-family: courier;
+    font-size: 15px;
+	padding-bottom:0px; margin-bottom:0px;
+	padding-top:0px; margin-top:0px;
+}
+
+.nameStyle { 
+	color: black;
+    font-family: courier;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+
+
+

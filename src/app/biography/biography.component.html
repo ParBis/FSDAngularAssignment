@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Personal Biography</title>		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="navigationJs.js"></script>
+	</head>
+	<body>
+		<form>
+			
+			<div class="form-group container col-md-12 headerStyle">Personal Biography</div>	
+			<div class="form-group container col-md-12">
+				<div class="row" id = "mainPiDiv">
+					<div class="col-6 col-md-12 divText"><b>Additional interest</b>
+						<button type="button" class="close delBtn" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="col-6 col-md-12 divText">1. Reading New Papers and Story Books
+						<button type="button" class="close delBtn" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="col-6 col-md-12 divText">2. Solving Rubi's Cube
+						<button type="button" class="close delBtn" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="col-6 col-md-12 divText">3. Travelling  Photography
+						<button type="button" class="close delBtn" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			
+			<!--div> <p><a href="navigation.html">Return to Navigation</a></p></div-->
+			
+			
+			
+			<br><br><br>
+			<div class="input-group input-group-sm mb-3">
+			  <div class="input-group-prepend">
+				<span class="input-group-text" id="inputGroup-sizing-sm">Serial</span>
+			  </div>
+			  <input type="number" id="serialId" name="serialId" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: (1..9)" required/>
+			</div>
+			<div class="input-group input-group-sm mb-3">
+			  <div class="input-group-prepend">
+				<span class="input-group-text" id="inputGroup-sizing-sm">Interest/Knowledge</span>
+			  </div>
+			  <input type="text" id="piId" name="piId" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Interest/Knowledge" required/>
+			</div>
+			
+			<!--button type="button" class="btn btn-secondary btn-sm" onClick="addPi()">Add More</button-->
+			<button type="button" class="btn btn-secondary btn-sm" id="piButton" >Add More</button>
+		</form>
+	</body>
+</html>
