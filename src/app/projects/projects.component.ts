@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProjectService} from './project.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-projects',
@@ -9,10 +10,13 @@ import { Router } from '@angular/router';
   providers: [ProjectService]
 })
 export class ProjectsComponent implements OnInit {
-  projectId: '';
+  projectDet: any = {
+      project: ''
+  };
   private projects;
   
-  constructor(public projectService: ProjectService, private router: Router) {
+  constructor(public projectService: ProjectService, private router: Router, 
+    private location: Location, private route: ActivatedRoute) {
     console.log('Project CONSTRUCTOR **')
   }
 
@@ -27,13 +31,13 @@ export class ProjectsComponent implements OnInit {
   }
 
 
-  addProject(projectId: string){
-    if(projectId.length > 0){
-      this.projectService.addProject({project: projectId})
+  addProject(){
+    if(this.projectDet.project.length > 0){
+      this.projectService.addProject({project: this.projectDet.project})
       .then((res) =>{
           console.log('addProject In the Project component -- post' ,res);
           this.projects = res;
-          //projectId = '';
+          this.projectDet.project = '';
           this.router.navigateByUrl('/projects');
       })
     }

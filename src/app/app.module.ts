@@ -9,6 +9,7 @@ import { BiographyComponent } from './biography/biography.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StorageServiceModule } from 'angular-webstorage-service';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {path: '', component: ProfileComponent},
@@ -31,7 +32,8 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    StorageServiceModule
+    StorageServiceModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
